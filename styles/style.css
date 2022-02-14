@@ -8,6 +8,9 @@ a{
 ion-icon {
         font-size: 45px;
 }
+strong {
+    font-weight: 700;
+}
 
 body {
     background-color: #E5E5E5;
@@ -47,6 +50,7 @@ header img{
     margin-bottom: 4px;
     background-color: #FFFFFF;
     font-size: 14px;
+    word-break: break-all;
 }
 .mensagem.status {
     background-color: #DCDCDC;
@@ -99,6 +103,7 @@ input {
     border: none;
     font-size: 18px;
     font-style: italic;
+    word-break: break-all;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
