@@ -45,22 +45,18 @@ function buscarMsg() {
     })
     .catch(function(erro) {
         window.location.reload();
-    })
+    });
 }
 
 function enviarMsg() {
     let input = document.querySelector("input");
-    console.log(input.value);
     let promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/messages", {
         from: nome,
 	    to: "Todos",
 	    text: input.value,
 	    type: "message"
     });
-    promise
-    .then(function (resposta) {
-        console.log(resposta);
-    })
+    document.querySelector("input").value = "";
 }
 
 logar();
@@ -75,6 +71,5 @@ setInterval(function() {
     buscarMsg();
     const last = document.querySelector('.container');
     const elementoQueQueroQueApareca = last.lastChild
-    console.log(elementoQueQueroQueApareca);
     elementoQueQueroQueApareca.scrollIntoView();
 }, 3000);
